@@ -13,6 +13,39 @@ hamburgerBtn.addEventListener("click", () => {
 });
 
 hideMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+
+/*!
+=================================================================================================================================
+     *Gestion du changement de style de la barre de navigation lors du défilement
+=================================================================================================================================
+*/
+
+window.addEventListener("scroll", function () {
+    var navbar = document.getElementById("navbar");
+    var navLinks = document.querySelectorAll(".navlinks a");
+    var logoLink = document.querySelector(".navbar h1 span");
+
+
+    var scrolled = window.scrollY > 8; // 3mm de défilement
+  
+    if (scrolled) {
+      navbar.classList.add("scrolled");
+      navLinks.forEach(function (link) {
+        link.classList.add("scrolled");
+      });
+      logoLink.classList.add("scrolled");
+      loginBtn.classList.add("scrolled");
+      navbar.classList.add("color");
+    } else {
+      navbar.classList.remove("scrolled");
+      navLinks.forEach(function (link) {
+        link.classList.remove("scrolled");
+      });
+      logoLink.classList.remove("scrolled");
+      loginBtn.classList.remove("scrolled");
+      navbar.classList.remove("color");
+    }
+  });
 /* 
 ================================================================================================================================
  ****************Annimation de la page

@@ -4,36 +4,9 @@
         *HEAD
     =================================================================================================================================
     */
-    .navbar {
-        height: 5vh;
-        width: 90%;
-    }
-    header{
-        height:50vh;
-    }
-    .header{
-        height:50vh;
-        max-height: 40vh;
-        min-height: 40vh;
-    }
-    .header-title {
-        width: 60%;
-        height: auto;
-        max-width: auto;
-        max-height: auto;
-        max-width: auto;
-        margin: auto;
-        display: flex;
-    }
-          /*!
-    =================================================================================================================================
-        *COMPÉTENCES
-    =================================================================================================================================
-    */
-    .compétenses{
-        height: 50vw;
-        padding-bottom: 20px;
-    }
+    .services{
+        margin-bottom: 40px;
+      }
 
 }
 
@@ -41,12 +14,9 @@
 @media screen and (max-width:1440px) {
     /*!
     =================================================================================================================================
-        *SPETIALITÉ
+        *A PROPOS
     =================================================================================================================================
     */
-    .spétialitée{
-        margin: 80px auto;
-    }
     #zone-spétial{
         width: 90vw;
     }
@@ -54,22 +24,35 @@
         width: 50%;
     }
     .spétial-txt h1{
-        font-size: 2.2vw;
+        font-size: 3.2vw;
     }
     .spétial-txt p{
-        font-size: 1vw;
+        font-size: 1.2vw;
     }
-    .spétial-img2 img , .spétial-img img{
+    .spétial-img img{
         width: 80%;
         height:100%;
     }
     /*!
     =================================================================================================================================
-        *Expertise 
+        *A PROPOS
     =================================================================================================================================
     */
-    .wrapper .carousel {
-        grid-auto-columns: calc((100% / 4) - 10px);
+    #zone-services{
+        width: 90vw;
+    }
+    .services-txt{
+        width: 50%;
+    }
+    .services-txt h1{
+        font-size: 3.2vw;
+    }
+    .services-txt p{
+        font-size: 1.2vw;
+    }
+    .services-img img{
+        width: 80%;
+        height:100%;
     }
 }
 
@@ -97,21 +80,14 @@
         font-size: 1.2rem;
         width: 90%;
     }
-    /*!
-    =================================================================================================================================
-        *Expertise 
-    =================================================================================================================================
-    */
-    .wrapper .carousel {
-        grid-auto-columns: calc((100% / 3) - 10px);
-        overflow: hidden;
-    }
-    .navlinks{
-        width: 60%;
-    }
-    .navlinks a{
-        font-size: 18px;
-        padding: 0;
+    .services-itms{
+        width: 90vw;
+      }
+    .services-itms{
+        grid-template-columns: repeat(3 ,1fr);  
+      }
+    .services-itms{
+        margin-top: 0;
     }
 }     
 
@@ -137,31 +113,37 @@
     nav {
         width: 100vw;
         max-width: 100%;  
-        padding: 0 20px 0 0;
+    }
+    .ma-nav{
+        width: 100vw;
     }
     .navlinks {
         display: flex;
         position: absolute;
         flex-direction: column;
         justify-content: center;
-        background-color: black;
+        background-color: #d4adfc;
         transition: 0.3s ease;
-        z-index: 2;
         align-items: center;
         top: 0;
+        bottom: 0;
         width: 100vw;
         max-width: 100%;
         height: 100vh;
+        max-height: 100vh;
+        min-height: 100vh;
         gap: 40px;
         left: -2000px;
         margin: 0;
         padding: 0;
+        z-index: 9;
     }
     .navlinks a{
         font-size: 25px;
+        color: black;
     }
     .navbar h1 a{
-        padding-left: 40px;
+        padding-left: 95px;
     }
     nav .hamburger-btn {
         color: white;  
@@ -169,7 +151,7 @@
         font-size: 40px;
         display: block;
         top: 40px;
-        padding-right: 40px;
+        padding-right: 95px;
     }
     .show-menu {
         left: 0;
@@ -185,7 +167,7 @@
         font-size: 24px;
       }
       nav .close-btn {
-        right: 25px;
+        right: 95px;
         left: 0px;
         top: 15px;
         display: block;
@@ -198,24 +180,31 @@
     }
     /*!
     =================================================================================================================================
-        *SPETIALITÉ
+        *A PROPOS
     =================================================================================================================================
     */
-    .spétialitée{
-        width: 90vw;
+    .a-propos{
+        width: 100vw;
         max-width: 100%;
         height: auto;
-        display: none;
     }
+    .a-propos::after {
+        z-index: -1;
+
+      }
     #zone-spétial{
-        width: auto;
+        width: 90%;
+        max-width: 90%;
+        min-width: 90%;
         min-width: none;
         flex-wrap: wrap;
         padding: 20px;
         overflow: hidden;
+        margin: 50px 0;
+        z-index: 0;
     }
     .spétial-img2 img , .spétial-img img{
-        width: 90vw;
+        width: 80vw;
         height:250px;
         margin: auto;
         object-position: top;
@@ -224,17 +213,81 @@
         width: 90vw;
     }
     .spétial-txt h1{
-        font-size: 30px;
+        font-size: 40px;
     }
     .spétial-txt p{
         font-size: 18px;
+        text-align: justify;
     }
     .spétial-img{
+        width: 90%;
+    }
+    .spétial-img img{
+        width: 100%;
+        min-height: 300px;
+    }
+
+     /*!
+    =================================================================================================================================
+        *Nos services
+    =================================================================================================================================
+    */
+    .services{
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+    }
+    .services::after {
+        z-index: -1;
+
+      }
+    #zone-services{
+        width: 90%;
+        max-width: 90%;
+        min-width: 90%;
+        min-width: none;
+        flex-wrap: wrap;
+        padding: 20px;
+        overflow: hidden;
+        margin: 50px 0;
+        z-index: 0;
+    }
+    .services-img img{
+        width: 80vw;
+        height:250px;
+        margin: auto;
+        object-position: top;
+    }
+    .services-txt{
+        width: 90%;
+    }
+    .services-txt h1{
+        font-size: 40px;
+    }
+    .services-txt p{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .services-img{
+        width: 90%;
+    }
+    .services-img img{
+        width: 100%;
+        min-height: 570px;
+        object-fit: cover;
+    }
+    .services-img2{
         width: 100%;
     }
-    .pétial-img2{
-        width: 100%;
+    .trait{
+        color: #d4adfc;
     }
+    .services-itms{
+        width: 80vw;
+      }
+    .services-itms{
+        grid-template-columns: repeat(1 ,1fr);  
+      }
 }
 @media screen and (max-width:990px) {
     /*!
@@ -281,6 +334,10 @@
      #socialslinks i{
         font-size: 20px;
       }
+      .services{
+        margin-bottom: 40px;
+        width: 90vw;
+      }
 }
 @media screen and (max-width:770px) {
      /*!
@@ -288,40 +345,81 @@
         *HEAD
     =================================================================================================================================
     */
+    .navbar h1 a{
+        padding-left: 45px;
+    }
+    nav .hamburger-btn {
+        padding-right: 45px;
+    }
+    nav .close-btn {
+        right: 45px;
+        top: 11px;
+      }
+    .txt-zone h1{
+        font-size:4.2vw;
+    }
+    #secondp{
+        font-size: 18px;
+    }
+    p#firstp{
+        font-size: 12px;
+        width: 90vw;
+    }
+    /*!
+    =================================================================================================================================
+        *A PROPOS
+    =================================================================================================================================
+    */
     #zone-spétial{
-        width: 60vw;
-        width: auto;
-        min-width: none;
-        margin: 0;
+        width: 90vw;
+        max-width: 90vw;
+        min-width: 90vw;
+        margin: 50px auto;
         flex-wrap: wrap;
         padding: 0;
-        overflow: hidden;
+    }
+    .spétial-txt{
+        width: 100%;
     }
     .spétial-img{
         width: 100%;
     }
-    .spétial-img2 img , .spétial-img img{
-        width: 90vw;
+   .spétial-img img{
+        width: 100%;
         height:250px;
         margin: auto;
         object-position: top;
     }
-    .navbar h1 a{
+    .spétial-txt h1{
+        font-size: 4.5vw;
+    }
+         /*!
+    =================================================================================================================================
+        *A PROPOS
+    =================================================================================================================================
+    */
+    #zone-services{
+        width: 90vw;
+        max-width: 90vw;
+        min-width: 90vw;
+        margin: 50px auto;
+        flex-wrap: wrap;
         padding: 0;
     }
-    nav .hamburger-btn {
-        padding: 0;
+    .services-txt{
+        width: 100%;
     }
-    .txt-zone h1{
-        font-size:30px;
+    .services-img{
+        width: 100%;
     }
-    #secondp{
-        font-size: 18px;
-        width: 80%;
+   .services-img img{
+        width: 100%;
+        height:250px;
+        margin: auto;
+        object-position: top;
     }
-    p#firstp{
-        font-size: 12px;
-        width: 80%;
+    .services-txt h1{
+        font-size: 4.5vw;
     }
 }
 
@@ -331,12 +429,21 @@
        *HEAD
    =================================================================================================================================
    */
-   .txt-zone{
-        width: 90vw;
-        min-width: 90vw;
-        margin: auto;
-        order: 2;
-        text-align: center;
+   .navbar h1 a{
+    padding-left: 35px;
+    }
+    nav .hamburger-btn {
+        padding-right: 35px;
+    }
+    nav .close-btn {
+        right: 35px;
+    }
+  .txt-zone{
+    width: 90vw;
+    min-width: 90vw;
+    margin: auto;
+    order: 2;
+    text-align: center;
     }
     .txt-zone h1{
         font-size:30px;
